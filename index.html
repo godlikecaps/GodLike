@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Godlike Caps</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      color: #aaa;
+      margin-top: 5px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 30px;
+    }
+    .card {
+      background: #111;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .price {
+      color: #00ff88;
+      font-weight: bold;
+    }
+    button {
+      background: #00ff88;
+      color: black;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #00cc6a;
+    }
+    .nequi {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #222;
+      color: #aaa;
+    }
+    .contacto {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>GODLIKE 🧢</h1>
+  <p>Streetwear que habla por ti</p>
+</header>
+
+<div class="container">
+  <div class="card">
+    <img src="https://via.placeholder.com/250" alt="Gorra negra">
+    <h3>Godlike Black</h3>
+    <p class="price">$50.000</p>
+    <button onclick="contactar('Godlike Black')">Comprar por WhatsApp</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250" alt="Gorra roja">
+    <h3>Godlike Blood</h3>
+    <p class="price">$55.000</p>
+    <button onclick="contactar('Godlike Blood')">Comprar por WhatsApp</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250" alt="Gorra blanca">
+    <h3>Godlike White</h3>
+    <p class="price">$60.000</p>
+    <button onclick="contactar('Godlike White')">Comprar por WhatsApp</button>
+  </div>
+</div>
+
+<div class="contacto">
+  <button onclick="contactoDirecto()">Hablar con GODLIKE 📲</button>
+</div>
+
+<div class="nequi">
+  <p>Pagos por Nequi 📲</p>
+  <p>Número: 350 754 6275</p>
+  <p>Después de pagar, envía comprobante por WhatsApp</p>
+</div>
+
+<script>
+  const numero = "573507546275"; // cambia por tu número real
+
+  function contactar(producto) {
+    const mensaje = encodeURIComponent("Hola, quiero comprar la gorra " + producto + " de GODLIKE");
+    window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+  }
+
+  function contactoDirecto() {
+    const mensaje = encodeURIComponent("Hola, quiero información sobre las gorras GODLIKE");
+    window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
